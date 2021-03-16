@@ -1,0 +1,47 @@
+[0m[[0m[0mdebug[0m] [0m[0mExecuting Native docker build --force-rm -t hello:0.1.0-SNAPSHOT .[0m
+[0m[[0m[0mdebug[0m] [0m[0mWorking directory /home/trevor/Desktop/sbt/foo-build/target/docker/stage[0m
+[0m[[0m[31merror[0m] [0m[0mERROR: (gcloud.auth.docker-helper) There was a problem refreshing your current auth tokens: invalid_grant: Bad Request[0m
+[0m[[0m[31merror[0m] [0m[0mPlease run:[0m
+[0m[[0m[31merror[0m] [0m[0m  $ gcloud auth login[0m
+[0m[[0m[31merror[0m] [0m[0mto obtain new credentials, or if you have already logged in with a[0m
+[0m[[0m[31merror[0m] [0m[0mdifferent account:[0m
+[0m[[0m[31merror[0m] [0m[0m  $ gcloud config set account ACCOUNT[0m
+[0m[[0m[31merror[0m] [0m[0mto select an already authenticated account to use.[0m
+[0m[[0m[0minfo[0m] [0m[0mSending build context to Docker daemon  13.52MB[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 1/6 : FROM openjdk:latest[0m
+[0m[[0m[0minfo[0m] [0m[0mlatest: Pulling from library/openjdk[0m
+[0m[[0m[0minfo[0m] [0m[0m63e877180dd1: Pulling fs layer[0m
+[0m[[0m[0minfo[0m] [0m[0m2d9ff0a89ff9: Pulling fs layer[0m
+[0m[[0m[0minfo[0m] [0m[0mc5fef035cfbe: Pulling fs layer[0m
+[0m[[0m[0minfo[0m] [0m[0m2d9ff0a89ff9: Verifying Checksum[0m
+[0m[[0m[0minfo[0m] [0m[0m2d9ff0a89ff9: Download complete[0m
+[0m[[0m[0minfo[0m] [0m[0m63e877180dd1: Download complete[0m
+[0m[[0m[0minfo[0m] [0m[0m63e877180dd1: Pull complete[0m
+[0m[[0m[0minfo[0m] [0m[0m2d9ff0a89ff9: Pull complete[0m
+[0m[[0m[0minfo[0m] [0m[0mc5fef035cfbe: Verifying Checksum[0m
+[0m[[0m[0minfo[0m] [0m[0mc5fef035cfbe: Download complete[0m
+[0m[[0m[0minfo[0m] [0m[0mc5fef035cfbe: Pull complete[0m
+[0m[[0m[0minfo[0m] [0m[0mDigest: sha256:3d35137579870e9b53716879449aa88d0e455fe725ac4e60c20b25761e789993[0m
+[0m[[0m[0minfo[0m] [0m[0mStatus: Downloaded newer image for openjdk:latest[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> 051805fe9464[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 2/6 : WORKDIR /opt/docker[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> Running in 83797d75377d[0m
+[0m[[0m[0minfo[0m] [0m[0mRemoving intermediate container 83797d75377d[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> 62747063fe3e[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 3/6 : ADD --chown=daemon:daemon opt /opt[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> c43784191bcd[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 4/6 : USER daemon[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> Running in 5333fb818e9c[0m
+[0m[[0m[0minfo[0m] [0m[0mRemoving intermediate container 5333fb818e9c[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> 3f5b438d43a1[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 5/6 : ENTRYPOINT ["/opt/docker/bin/hello"][0m
+[0m[[0m[0minfo[0m] [0m[0m ---> Running in 6e3d6230ba68[0m
+[0m[[0m[0minfo[0m] [0m[0mRemoving intermediate container 6e3d6230ba68[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> 69c3190c6946[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 6/6 : CMD [][0m
+[0m[[0m[0minfo[0m] [0m[0m ---> Running in 3006681a635e[0m
+[0m[[0m[0minfo[0m] [0m[0mRemoving intermediate container 3006681a635e[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> de86333bd70b[0m
+[0m[[0m[0minfo[0m] [0m[0mSuccessfully built de86333bd70b[0m
+[0m[[0m[0minfo[0m] [0m[0mSuccessfully tagged hello:0.1.0-SNAPSHOT[0m
+[0m[[0m[0minfo[0m] [0m[0mBuilt image hello:0.1.0-SNAPSHOT[0m

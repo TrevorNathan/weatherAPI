@@ -1,0 +1,12 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(dist, Some(a7c2c3c4-8626-4280-9310-37e5121cecf3), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: dist[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mWrote /home/trevor/Desktop/sbt/foo-build/target/scala-2.12/hello_2.12-0.1.0-SNAPSHOT.pom[0m
+[0m[[0m[0minfo[0m] [0m[0mMain Scala API documentation to /home/trevor/Desktop/sbt/foo-build/target/scala-2.12/api...[0m
+[0m[[0m[0minfo[0m] [0m[0mMain Scala API documentation successful.[0m
+[0m[[0m[0minfo[0m] [0m[0mMain Scala API documentation to /home/trevor/Desktop/sbt/foo-build/core/target/scala-2.12/api...[0m
+[0m[[0m[0minfo[0m] [0m[0mWrote /home/trevor/Desktop/sbt/foo-build/core/target/scala-2.12/hello-core_2.12-0.1.0-SNAPSHOT.pom[0m
+[0m[[0m[0minfo[0m] [0m[0mMain Scala API documentation successful.[0m
+[0m[[0m[0minfo[0m] [0m[0mYour package is ready in /home/trevor/Desktop/sbt/foo-build/target/universal/hello-0.1.0-SNAPSHOT.zip[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 11 s, completed Mar 16, 2021 7:53:15 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

@@ -1,0 +1,64 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(Docker/publishLocal, Some(e44d53a3-6027-477a-a93c-fa7064329e0b), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: helloCore / Docker / publishLocal, Docker / publishLocal[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mWrote /home/trevor/Desktop/sbt/foo-build/core/target/scala-2.12/hello-core_2.12-0.1.0-SNAPSHOT.pom[0m
+[0m[[0m[0minfo[0m] [0m[0mMain Scala API documentation to /home/trevor/Desktop/sbt/foo-build/core/target/scala-2.12/api...[0m
+[0m[[0m[0minfo[0m] [0m[0mMain Scala API documentation successful.[0m
+[0m[[0m[0minfo[0m] [0m[0m:: delivering :: com.example#hello-core_2.12;0.1.0-SNAPSHOT :: 0.1.0-SNAPSHOT :: integration :: Tue Mar 16 19:57:37 EAT 2021[0m
+[0m[[0m[0minfo[0m] [0m[0m	delivering ivy file to /home/trevor/Desktop/sbt/foo-build/core/target/scala-2.12/ivy-0.1.0-SNAPSHOT.xml[0m
+[0m[[0m[0minfo[0m] [0m[0m	published hello-core_2.12 to /home/trevor/.ivy2/local/com.example/hello-core_2.12/0.1.0-SNAPSHOT/poms/hello-core_2.12.pom[0m
+[0m[[0m[0minfo[0m] [0m[0m	published hello-core_2.12 to /home/trevor/.ivy2/local/com.example/hello-core_2.12/0.1.0-SNAPSHOT/jars/hello-core_2.12.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	published hello-core_2.12 to /home/trevor/.ivy2/local/com.example/hello-core_2.12/0.1.0-SNAPSHOT/srcs/hello-core_2.12-sources.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	published hello-core_2.12 to /home/trevor/.ivy2/local/com.example/hello-core_2.12/0.1.0-SNAPSHOT/docs/hello-core_2.12-javadoc.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	published ivy to /home/trevor/.ivy2/local/com.example/hello-core_2.12/0.1.0-SNAPSHOT/ivys/ivy.xml[0m
+[0m[[0m[0minfo[0m] [0m[0mWrote /home/trevor/Desktop/sbt/foo-build/target/scala-2.12/hello_2.12-0.1.0-SNAPSHOT.pom[0m
+[0m[[0m[0minfo[0m] [0m[0mMain Scala API documentation to /home/trevor/Desktop/sbt/foo-build/target/scala-2.12/api...[0m
+[0m[[0m[0minfo[0m] [0m[0mMain Scala API documentation successful.[0m
+[0m[[0m[31merror[0m] [0m[0mERROR: (gcloud.auth.docker-helper) There was a problem refreshing your current auth tokens: invalid_grant: Bad Request[0m
+[0m[[0m[31merror[0m] [0m[0mPlease run:[0m
+[0m[[0m[31merror[0m] [0m[0m  $ gcloud auth login[0m
+[0m[[0m[31merror[0m] [0m[0mto obtain new credentials, or if you have already logged in with a[0m
+[0m[[0m[31merror[0m] [0m[0mdifferent account:[0m
+[0m[[0m[31merror[0m] [0m[0m  $ gcloud config set account ACCOUNT[0m
+[0m[[0m[31merror[0m] [0m[0mto select an already authenticated account to use.[0m
+[0m[[0m[0minfo[0m] [0m[0mSending build context to Docker daemon  13.52MB[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 1/6 : FROM openjdk:latest[0m
+[0m[[0m[0minfo[0m] [0m[0mlatest: Pulling from library/openjdk[0m
+[0m[[0m[0minfo[0m] [0m[0m63e877180dd1: Pulling fs layer[0m
+[0m[[0m[0minfo[0m] [0m[0m2d9ff0a89ff9: Pulling fs layer[0m
+[0m[[0m[0minfo[0m] [0m[0mc5fef035cfbe: Pulling fs layer[0m
+[0m[[0m[0minfo[0m] [0m[0m2d9ff0a89ff9: Verifying Checksum[0m
+[0m[[0m[0minfo[0m] [0m[0m2d9ff0a89ff9: Download complete[0m
+[0m[[0m[0minfo[0m] [0m[0m63e877180dd1: Download complete[0m
+[0m[[0m[0minfo[0m] [0m[0m63e877180dd1: Pull complete[0m
+[0m[[0m[0minfo[0m] [0m[0m2d9ff0a89ff9: Pull complete[0m
+[0m[[0m[0minfo[0m] [0m[0mc5fef035cfbe: Verifying Checksum[0m
+[0m[[0m[0minfo[0m] [0m[0mc5fef035cfbe: Download complete[0m
+[0m[[0m[0minfo[0m] [0m[0mc5fef035cfbe: Pull complete[0m
+[0m[[0m[0minfo[0m] [0m[0mDigest: sha256:3d35137579870e9b53716879449aa88d0e455fe725ac4e60c20b25761e789993[0m
+[0m[[0m[0minfo[0m] [0m[0mStatus: Downloaded newer image for openjdk:latest[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> 051805fe9464[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 2/6 : WORKDIR /opt/docker[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> Running in 83797d75377d[0m
+[0m[[0m[0minfo[0m] [0m[0mRemoving intermediate container 83797d75377d[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> 62747063fe3e[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 3/6 : ADD --chown=daemon:daemon opt /opt[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> c43784191bcd[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 4/6 : USER daemon[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> Running in 5333fb818e9c[0m
+[0m[[0m[0minfo[0m] [0m[0mRemoving intermediate container 5333fb818e9c[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> 3f5b438d43a1[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 5/6 : ENTRYPOINT ["/opt/docker/bin/hello"][0m
+[0m[[0m[0minfo[0m] [0m[0m ---> Running in 6e3d6230ba68[0m
+[0m[[0m[0minfo[0m] [0m[0mRemoving intermediate container 6e3d6230ba68[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> 69c3190c6946[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 6/6 : CMD [][0m
+[0m[[0m[0minfo[0m] [0m[0m ---> Running in 3006681a635e[0m
+[0m[[0m[0minfo[0m] [0m[0mRemoving intermediate container 3006681a635e[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> de86333bd70b[0m
+[0m[[0m[0minfo[0m] [0m[0mSuccessfully built de86333bd70b[0m
+[0m[[0m[0minfo[0m] [0m[0mSuccessfully tagged hello:0.1.0-SNAPSHOT[0m
+[0m[[0m[0minfo[0m] [0m[0mBuilt image hello:0.1.0-SNAPSHOT[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 87 s (01:27), completed Mar 16, 2021 7:59:03 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
