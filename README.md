@@ -7,3 +7,4 @@
 - Add ScalaTest to subproject
 - Broadcast commands
 - Make mainproject depend on subproject
+- Parse JSON using Play JSON
