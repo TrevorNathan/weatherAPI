@@ -1,5 +1,5 @@
 package example 
 
 object Hello extends App {
-println("Hello sbt!")
+println("Hello sbt!!")
 }
