@@ -1,0 +1,7 @@
+[0m[[0m[31merror[0m] [0m[0m/home/trevor/Desktop/sbt/foo-build/src/main/scala/example/Hello.scala:4:11: value Hello is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0mprintln(""Hello sbt)[0m
+[0m[[0m[31merror[0m] [0m[0m          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/trevor/Desktop/sbt/foo-build/src/main/scala/example/Hello.scala:4:17: not found: value sbt[0m
+[0m[[0m[31merror[0m] [0m[0mprintln(""Hello sbt)[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

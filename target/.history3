@@ -1,0 +1,231 @@
+1615888933965:1+2
+1615888946153:exit
+1615889003957:help
+1615889051215:~compile
+1615889809842:;set _root_.scala.collection.Seq(historyPath := None,shellPrompt := { _ => "" },SettingKey[_root_.scala.Option[_root_.sbt.File]]("sbtStructureOutputFile") in _root_.sbt.Global := _root_.scala.Some(_root_.sbt.file("/tmp/sbt-structure.xml")),SettingKey[_root_.java.lang.String]("sbtStructureOptions") in _root_.sbt.Global := "download, resolveClassifiers");apply -cp "/home/trevor/.local/share/JetBrains/IdeaIC2020.3/Scala/repo/org.jetbrains/sbt-structure-extractor/scala_2.12/sbt_1.0/2020.3/jars/sbt-structure-extractor.jar" org.jetbrains.sbt.CreateTasks;*/*:dumpStructure
+1615890335169:bt file should now contain:
+1615890335281:ThisBuild / scalaVersion := "2.12.7"
+1615890335337:Name your project
+1615890335391:Using an editor, change build.sbt as follows:
+1615890335467:ThisBuild / scalaVersion := "2.12.7"
+1615890335540:ThisBuild / organization := "com.example"
+1615890335815:lazy val hello = (project in file("."))
+1615890336098:Reload the build
+1615890336188:Use the reload command to reload the build. The command causes the build.sbt file to be re-read, and its settings applied.
+1615890336247:sbt:foo-build> reload
+1615890336313:[info] Loading project definition from /tmp/foo-build/project
+1615890336371:[info] Loading settings from build.sbt ...
+1615890336420:[info] Set current project to Hello (in build file:/tmp/foo-build/)
+1615890336469:sbt:Hello>
+1615890336529:Note that the prompt has now changed to sbt:Hello>.
+1615890336599:Add ScalaTest to libraryDependencies
+1615890336638:Using an editor, change build.sbt as follows:
+1615890336707:ThisBuild / scalaVersion := "2.12.7"
+1615890336755:ThisBuild / organization := "com.example"
+1615890336812:lazy val hello = (project in file("."))
+1615890337060:Use the reload command to reflect the change in build.sbt.
+1615890337109:sbt:Hello> reload
+1615890337148:Run tests
+1615890337180:sbt:Hello> test
+1615890337213:Run incremental tests continuously
+1615890337247:sbt:Hello> ~testQuick
+1615890337279:Write a test
+1615890337311:Leaving the previous command running, create a file named src/test/scala/HelloSpec.scala using an editor:
+1615890337369:import org.scalatest._
+1615890337443:class HelloSpec extends FunSuite with DiagrammedAssertions {
+1615890337589:}
+1615890337617:~testQuick should pick up the change:
+1615890338108:2. Waiting for source changes... (press enter to interrupt)
+1615890338150:[info] Compiling 1 Scala source to /tmp/foo-build/target/scala-2.12/test-classes ...
+1615890338185:[info] Done compiling.
+1615890338214:[info] HelloSpec:
+1615890338248:[info] - Hello should start with H *** FAILED ***
+1615890338283:[info]   assert("hello".startsWith("H"))
+1615890338314:[info]          |       |          |
+1615890338347:[info]          "hello" false      "H" (HelloSpec.scala:5)
+1615890338376:[info] Run completed in 135 milliseconds.
+1615890338410:[info] Total number of tests run: 1
+1615890338445:[info] Suites: completed 1, aborted 0
+1615890338487:[info] Tests: succeeded 0, failed 1, canceled 0, ignored 0, pending 0
+1615890338518:[info] *** 1 TEST FAILED ***
+1615890338544:[error] Failed tests:
+1615890338571:[error]   HelloSpec
+1615890338611:[error] (Test / testQuick) sbt.TestsFailedException: Tests unsuccessful
+1615890338637:Make the test pass
+1615890338664:Using an editor, change src/test/scala/HelloSpec.scala to:
+1615890338715:import org.scalatest._
+1615890338779:class HelloSpec extends FunSuite with DiagrammedAssertions {
+1615890338985:}
+1615890339026:Confirm that the test passes, then press Enter to exit the continuous test.
+1615890339075:Add a library dependency
+1615890339112:Using an editor, change build.sbt as follows:
+1615890339183:ThisBuild / scalaVersion := "2.12.7"
+1615890339218:ThisBuild / organization := "com.example"
+1615890339280:lazy val hello = (project in file("."))
+1615890339528:Use the reload command to reflect the change in build.sbt.
+1615890339571:Use Scala REPL
+1615890339601:We can find out the current weather in New York.
+1615890339648:sbt:Hello> console
+1615890339683:[info] Starting scala interpreter...
+1615890339712:Welcome to Scala 2.12.7 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_171).
+1615890339737:Type in expressions for evaluation. Or try :help.
+1615890339791:scala> :paste
+1615890339829:// Entering paste mode (ctrl-D to finish)
+1615890339880:import scala.concurrent._, duration._
+1615890339924:import gigahorse._, support.okhttp.Gigahorse
+1615890339963:import play.api.libs.json._
+1615890340023:Gigahorse.withHttp(Gigahorse.config) { http =>
+1615890340496:}
+1615890340559:// press Ctrl+D
+1615890340607:// Exiting paste mode, now interpreting.
+1615890340649:import scala.concurrent._
+1615890340684:import duration._
+1615890340723:import gigahorse._
+1615890340757:import support.okhttp.Gigahorse
+1615890340793:import play.api.libs.json._
+1615890340840:res0: String =
+1615890340869:{
+1615890341544:...
+1615890341611:scala> :q // to quit
+1615890341649:Make a subproject
+1615890341677:Change build.sbt as follows:
+1615890341728:ThisBuild / scalaVersion := "2.12.7"
+1615890341763:ThisBuild / organization := "com.example"
+1615890341816:lazy val hello = (project in file("."))
+1615890342026:lazy val helloCore = (project in file("core"))
+1615890342192:Use the reload command to reflect the change in build.sbt.
+1615890342245:List all subprojects
+1615890342271:sbt:Hello> projects
+1615890342296:[info] In file:/tmp/foo-build/
+1615890342320:[info]   * hello
+1615890342349:[info]     helloCore
+1615890342385:Compile the subproject
+1615890342437:sbt:Hello> helloCore/compile
+1615890342477:Add ScalaTest to the subproject
+1615890342507:Change build.sbt as follows:
+1615890342552:ThisBuild / scalaVersion := "2.12.7"
+1615890342579:ThisBuild / organization := "com.example"
+1615890342635:val scalaTest = "org.scalatest" %% "scalatest" % "3.0.5"
+1615890342687:lazy val hello = (project in file("."))
+1615890342890:lazy val helloCore = (project in file("core"))
+1615890343069:Broadcast commands
+1615890343095:Set aggregate so that the command sent to hello is broadcast to helloCore too:
+1615890343139:ThisBuild / scalaVersion := "2.12.7"
+1615890343166:ThisBuild / organization := "com.example"
+1615890343226:val scalaTest = "org.scalatest" %% "scalatest" % "3.0.5"
+1615890343288:lazy val hello = (project in file("."))
+1615890343548:lazy val helloCore = (project in file("core"))
+1615890343728:After reload, ~testQuick now runs on both subprojects:
+1615890343778:sbt:Hello> ~testQuick
+1615890343804:Press Enter to exit the continuous test.
+1615890343846:Make hello depend on helloCore
+1615890343886:Use .dependsOn(...) to add a dependency on other subprojects. Also let’s move the Gigahorse dependency to helloCore.
+1615890343942:ThisBuild / scalaVersion := "2.12.7"
+1615890343986:ThisBuild / organization := "com.example"
+1615890344039:val scalaTest = "org.scalatest" %% "scalatest" % "3.0.5"
+1615890344121:lazy val hello = (project in file("."))
+1615890344346:lazy val helloCore = (project in file("core"))
+1615890344560:Parse JSON using Play JSON
+1615890344601:Let’s add Play JSON to helloCore.
+1615890344689:ThisBuild / scalaVersion := "2.12.7"
+1615890344723:ThisBuild / organization := "com.example"
+1615890344772:val scalaTest = "org.scalatest" %% "scalatest" % "3.0.5"
+1615890344813:val gigahorse = "com.eed3si9n" %% "gigahorse-okhttp" % "0.3.1"
+1615890344847:val playJson  = "com.typesafe.play" %% "play-json" % "2.6.9"
+1615890344911:lazy val hello = (project in file("."))
+1615890345116:lazy val helloCore = (project in file("core"))
+1615890345297:After reload, add core/src/main/scala/example/core/Weather.scala:
+1615890345346:package example.core
+1615890345389:import gigahorse._, support.okhttp.Gigahorse
+1615890345434:import scala.concurrent._, duration._
+1615890345469:import play.api.libs.json._
+1615890345529:object Weather {
+1615890346155:}
+1615890346186:Next, change src/main/scala/example/Hello.scala as follows:
+1615890346236:package example
+1615890346285:import scala.concurrent._, duration._
+1615890346318:import core.Weather
+1615890346372:object Hello extends App {
+1615890346511:}
+1615890346539:Let’s run the app to see if it worked:
+1615890346594:sbt:Hello> run
+1615890346625:[info] Compiling 1 Scala source to /tmp/foo-build/core/target/scala-2.12/classes ...
+1615890346647:[info] Done compiling.
+1615890346677:[info] Compiling 1 Scala source to /tmp/foo-build/target/scala-2.12/classes ...
+1615890346706:[info] Packaging /tmp/foo-build/core/target/scala-2.12/hello-core_2.12-0.1.0-SNAPSHOT.jar ...
+1615890346731:[info] Done packaging.
+1615890346762:[info] Done compiling.
+1615890346787:[info] Packaging /tmp/foo-build/target/scala-2.12/hello_2.12-0.1.0-SNAPSHOT.jar ...
+1615890346816:[info] Done packaging.
+1615890346845:[info] Running example.Hello
+1615890346878:Hello! The weather in New York is mostly cloudy.
+1615890346912:Add sbt-native-packager plugin
+1615890346937:Using an editor, create project/plugins.sbt:
+1615890346993:addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.3.4")
+1615890347050:Next change build.sbt as follows to add JavaAppPackaging:
+1615890347095:ThisBuild / scalaVersion := "2.12.7"
+1615890347131:ThisBuild / organization := "com.example"
+1615890347176:val scalaTest = "org.scalatest" %% "scalatest" % "3.0.5"
+1615890347212:val gigahorse = "com.eed3si9n" %% "gigahorse-okhttp" % "0.3.1"
+1615890347240:val playJson  = "com.typesafe.play" %% "play-json" % "2.6.9"
+1615890347287:lazy val hello = (project in file("."))
+1615890347540:lazy val helloCore = (project in file("core"))
+1615890347704:Reload and create a .zip distribution
+1615890347727:sbt:Hello> reload
+1615890347752:...
+1615890347777:sbt:Hello> dist
+1615890347804:[info] Wrote /tmp/foo-build/target/scala-2.12/hello_2.12-0.1.0-SNAPSHOT.pom
+1615890347834:[info] Wrote /tmp/foo-build/core/target/scala-2.12/hello-core_2.12-0.1.0-SNAPSHOT.pom
+1615890347875:[info] Your package is ready in /tmp/foo-build/target/universal/hello-0.1.0-SNAPSHOT.zip
+1615890347901:Here’s how you can run the packaged app:
+1615890347959:$ /tmp/someother
+1615890347985:$ cd /tmp/someother
+1615890348022:$ unzip -o -d /tmp/someother /tmp/foo-build/target/universal/hello-0.1.0-SNAPSHOT.zip
+1615890348049:$ ./hello-0.1.0-SNAPSHOT/bin/hello
+1615890348073:Hello! The weather in New York is mostly cloudy.
+1615890348121:Dockerize your app
+1615890348152:sbt:Hello> Docker/publishLocal
+1615890348174:....
+1615890348201:[info] Successfully built b6ce1b6ab2c0
+1615890348230:[info] Successfully tagged hello:0.1.0-SNAPSHOT
+1615890348263:[info] Built image hello:0.1.0-SNAPSHOT
+1615890348293:Here’s how to run the Dockerized app:
+1615890348356:$ docker run hello:0.1.0-SNAPSHOT
+1615890348383:Hello! The weather in New York is mostly cloudy
+1615890348416:Set the version
+1615890348440:Change build.sbt as follows:
+1615890348485:ThisBuild / version      := "0.1.0"
+1615890348517:ThisBuild / scalaVersion := "2.12.7"
+1615890348550:ThisBuild / organization := "com.example"
+1615890348592:val scalaTest = "org.scalatest" %% "scalatest" % "3.0.5"
+1615890348625:val gigahorse = "com.eed3si9n" %% "gigahorse-okhttp" % "0.3.1"
+1615890348658:val playJson  = "com.typesafe.play" %% "play-json" % "2.6.9"
+1615891436865:~compile
+1615891514219:;set _root_.scala.collection.Seq(historyPath := None,shellPrompt := { _ => "" },SettingKey[_root_.scala.Option[_root_.sbt.File]]("sbtStructureOutputFile") in _root_.sbt.Global := _root_.scala.Some(_root_.sbt.file("/tmp/sbt-structure.xml")),SettingKey[_root_.java.lang.String]("sbtStructureOptions") in _root_.sbt.Global := "download, resolveClassifiers");apply -cp "/home/trevor/.local/share/JetBrains/IdeaIC2020.3/Scala/repo/org.jetbrains/sbt-structure-extractor/scala_2.12/sbt_1.0/2020.3/jars/sbt-structure-extractor.jar" org.jetbrains.sbt.CreateTasks;*/*:dumpStructure
+1615891896449:set ThisBuild / scalaVersion := "2.12.7"
+1615892029988:exit
+1615892084079:scalaVersion
+1615892140246:session save
+1615892179693:set ThisBuild / scalaVersion := "2.12.12"
+1615892281883:last
+1615892344118:compile
+1615892385477:run
+1615892418167:set ThisBuid / scalaVersion := "2.12.7"
+1615892433653:set ThisBuild / scalaVersion := "2.12.7"
+1615892462466:exit
+1615892560344:compile
+1615892642242:run
+1615892658867:set ThisBuild / scalaVersion := "2.12.7"
+1615892667590:session save
+1615892688512:;set _root_.scala.collection.Seq(historyPath := None,shellPrompt := { _ => "" },SettingKey[_root_.scala.Option[_root_.sbt.File]]("sbtStructureOutputFile") in _root_.sbt.Global := _root_.scala.Some(_root_.sbt.file("/tmp/sbt-structure.xml")),SettingKey[_root_.java.lang.String]("sbtStructureOptions") in _root_.sbt.Global := "download, resolveClassifiers");apply -cp "/home/trevor/.local/share/JetBrains/IdeaIC2020.3/Scala/repo/org.jetbrains/sbt-structure-extractor/scala_2.12/sbt_1.0/2020.3/jars/sbt-structure-extractor.jar" org.jetbrains.sbt.CreateTasks;*/*:dumpStructure
+1615896132070:reload
+1615896264751:test
+1615896795943:~testQuick
+1615897521884:reload
+1615897697477:console
+1615898223993:reload
+1615898249288:projects
+1615899042089:helloCore/compile
+1615899454188:~testQuick
+1615900426338:reload
+1615903595725:;set _root_.scala.collection.Seq(historyPath := None,shellPrompt := { _ => "" },SettingKey[_root_.scala.Option[_root_.sbt.File]]("sbtStructureOutputFile") in _root_.sbt.Global := _root_.scala.Some(_root_.sbt.file("/tmp/sbt-structure.xml")),SettingKey[_root_.java.lang.String]("sbtStructureOptions") in _root_.sbt.Global := "download, resolveClassifiers");apply -cp "/home/trevor/.local/share/JetBrains/IdeaIC2020.3/Scala/repo/org.jetbrains/sbt-structure-extractor/scala_2.12/sbt_1.0/2020.3/jars/sbt-structure-extractor.jar" org.jetbrains.sbt.CreateTasks;*/*:dumpStructure
