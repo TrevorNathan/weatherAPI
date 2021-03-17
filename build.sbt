@@ -16,6 +16,7 @@ lazy val hello = (project in file("."))
     libraryDependencies += scalaTest % Test,
   )
 
+//second project:
 lazy val helloCore = (project in file("core"))
   .settings(
     name := "Hello Core",
